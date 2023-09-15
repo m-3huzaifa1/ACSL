@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $name = $_POST["name"];
     $email = $_POST["email"];
     $subject = $_POST["subject"];
@@ -16,23 +16,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Content-Type: text/html\r\n";
     
     error_log("headers: " . $headers);
+
+    $txt = "Name: $name<br>Email: $email<br>Subject: $subject<br>Message:<br>$message";
     
-    $mailBody = "Name: $name<br>";
-    $mailBody .= "Email: $email<br>";
-    $mailBody .= "Subject: $subject<br>";
-    $mailBody .= "Message:<br>$message";
+    //$mailBody = "Name: $name<br>";
+    //$mailBody .= "Email: $email<br>";
+    //$mailBody .= "Subject: $subject<br>";
+    //$mailBody .= "Message:<br>$message";
+
     
-    error_log("body: " . $mailbody);
+    //error_log("body: " . $mailbody);
     
-    if (mail($to, $subject, $mailBody, $headers)) {
+    //if (mail($to, $subject, $mailBody, $headers)) {
+    if ($email!=NULL) {
+        mail($to, $subject, $txt, $headers);
         echo "success";
         error_log("Success");
     } else {
         echo "error";
         error_log("Error");
     }
-} else {
-    echo "Invalid request";
-    error_log("Invalid request");
-}
+header('Location:index.html');
+
 ?>
