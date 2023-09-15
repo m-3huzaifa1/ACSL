@@ -14,9 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mailBody .= "Email: $email<br>";
     $mailBody .= "Subject: $subject<br>";
     $mailBody .= "Message:<br>$message";
-
+    $txt = "Name: $name <br>Email: $email<br>Subject: $subject<br>Message:<br>$message";
     if (mail($to, $subject, $mailBody, $headers)) {
         echo "success";
+        
     } else {
         echo "error";
     }
