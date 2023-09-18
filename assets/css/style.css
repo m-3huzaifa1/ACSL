@@ -458,7 +458,7 @@ h6 {
 #heroc {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
+  background: #fff;/*linear-gradient(45deg, rgba(178, 164, 255, 0.9) 0%, rgba(91, 52, 130, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;*/
   background-size: cover;
 }
 #hero {
@@ -480,7 +480,7 @@ h6 {
   font-weight: 600;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   line-height: 64px;
-  color:#fff;
+  color:#5846f9;
 }
 
 #heroc h2 {
