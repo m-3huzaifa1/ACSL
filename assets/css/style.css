@@ -470,7 +470,7 @@ h6 {
 }
 #heroc .container,
 #heroc .container-fluid {
-  padding-top: 84px;
+  padding-top: 0px;
 }
 
 #heroc h1 {
@@ -584,7 +584,7 @@ h6 {
 
 #hero .container,
 #hero .container-fluid {
-  padding-top: 84px;
+  padding-top: 0px;
 }
 
 #hero h1 {
